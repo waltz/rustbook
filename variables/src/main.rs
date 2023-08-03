@@ -14,4 +14,10 @@ fn main() {
     let spaces = "     ";
     let spaces = &mut spaces.len().to_string();
     println!("mutable spaces is: {}", spaces);
+
+    let tup: (i64, f64, u8) = (500, 6.4, 1);
+    println!("toople: {:?}", tup);
+
+    let (foo, bar, baz) = tup;
+    println!("foo: {}, bar: {}, baz: {}", foo, bar, baz);
 }
