@@ -4,27 +4,16 @@ fn main() {
 
     let digits_of_fib = 30;
 
-    let mut i = 0;
-    let mut previous = 0;
-    let mut current = 0;
-
-    while i < digits_of_fib {
-        if i == 0 {
-            current = 0;
-            previous = 0;
-        } else if i == 1 {
-            current = 1; 
-            previous = 0;
-        } else {
-            let swap = previous;
-            previous = current;
-            current = swap + previous;
-        }
-
-        print!("{} ", current);
-
-        i = i + 1;
-    }
+    print!("0 1 ");
+    fib(0, 1, digits_of_fib - 2);
 
     println!("");
+}
+
+fn fib(previous: i64, current: i64, remaining: i64) {
+    if remaining > 0 {
+        let next = previous + current;
+        print!("{} ", next);
+        fib(current, next, remaining - 1);
+    }
 }
