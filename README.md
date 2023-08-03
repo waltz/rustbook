@@ -1,2 +1,3 @@
-# rustbook
-working through the rust book
+#rustbook
+
+me, working through the rust book
